@@ -1,0 +1,75 @@
+.slider_container {
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.slider_images {
+  display: flex;
+  flex-direction: row;
+  transition: ease-in-out;
+  transition-duration: 500ms;
+}
+.background {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgb(12, 12, 73) 0%, transparent 20%),
+    linear-gradient(0deg, rgb(12, 12, 73) 0%, transparent 20%);
+}
+
+.button_div {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow_img {
+  width: 50px;
+}
+
+.left {
+  border-style: none;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  background: linear-gradient(to right, rgba(12, 12, 73, 0.329), transparent);
+}
+
+.right {
+  border-style: none;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  background: linear-gradient(to left, rgb(12, 12, 73, 0.329), transparent);
+}
+
+.slider_container:hover {
+  .left {
+    visibility: visible;
+  }
+  .right {
+    visibility: visible;
+  }
+}
+
+.mainslider_img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  display: block;
+}
